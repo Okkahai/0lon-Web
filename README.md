@@ -77,34 +77,15 @@ http://localhost:8000
 
 ### GitHub Pages
 
-1. GitHub'da repository → **Settings** → **Pages**
-2. **Source:** "Deploy from a branch" → **Branch:** `main` → **Folder:** `/ (root)`
-3. **Save**
+1. Repository → **Settings** → **Pages**
+2. **Branch:** `main` → **Folder:** `/ (root)` → **Save**
 
 Site: `https://okkahai.github.io/0lon-Web`
 
-### Vercel (Önerilen)
+### Vercel
 
-1. [Vercel](https://vercel.com) hesabınıza giriş yapın
-2. "New Project" butonuna tıklayın
-3. GitHub repository'nizi import edin
-4. Vercel otomatik olarak ayarları algılayacak
-5. "Deploy" butonuna tıklayın
-
-### GitHub Pages
-
-1. Repository Settings'e gidin
-2. Pages bölümüne gidin
-3. Source olarak "main" branch'ini seçin
-4. Save'e tıklayın
-
-### Manuel Deployment
-
-Dosyaları herhangi bir statik hosting servisine yükleyebilirsiniz:
-- Netlify
-- GitHub Pages
-- Firebase Hosting
-- AWS S3 + CloudFront
+1. [Vercel](https://vercel.com) → "New Project"
+2. GitHub repository seçin → "Deploy"
 
 ## 🎯 Özellikler
 
