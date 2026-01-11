@@ -1,0 +1,17 @@
+{
+  "name": "0lon-web",
+  "version": "1.0.0",
+  "description": "0lon - Roguelike Survival Oyunu Web Sitesi",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": [
+    "game",
+    "roguelike",
+    "survival",
+    "0lon"
+  ],
+  "author": "dnzmnv",
+  "license": "MIT"
+}

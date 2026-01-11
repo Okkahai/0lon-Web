@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="0lon - Vampire Survivors tarzı hızlı tempolu roguelike survival oyunu. Düşman dalgalarına karşı hayatta kal!">
+    <title>0lon - Roguelike Survival Oyunu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">0lon</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Ana Sayfa</a></li>
+                <li><a href="#features">Özellikler</a></li>
+                <li><a href="#gallery">Galeri</a></li>
+                <li><a href="#download">İndir</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="pixel-grid"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-main">0lon</span>
+                    <span class="title-subtitle">Hayatta Kal</span>
+                </h1>
+                <p class="hero-description">
+                    Vampire Survivors tarzı hızlı tempolu roguelike survival oyunu. 
+                    Sürekli artan düşman dalgalarına karşı mücadele et, seviye atla ve 
+                    mümkün olduğunca uzun süre hayatta kalmaya çalış!
+                </p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn btn-primary">Oyunu İndir</a>
+                    <a href="#features" class="btn btn-secondary">Özellikler</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="game-preview">
+                    <div class="pixel-frame">
+                        <img src="images/gameplay-1.jpg" alt="0lon Oyun Ekran Görüntüsü" id="hero-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Oyun Özellikleri</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚔️</div>
+                    <h3>Hızlı Tempolu Savaş</h3>
+                    <p>Otomatik ateş sistemi ile sürekli aksiyon. Her 0.4 saniyede bir düşmanlara saldır!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Hızlı İlerleme</h3>
+                    <p>Her 5 öldürmede seviye atla. 20 seviyeye kadar çık ve güçlen!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👹</div>
+                    <h3>Dalga Sistemi</h3>
+                    <p>Her 6 saniyede bir büyük düşman dalgaları. Zamanla zorluk artar!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💪</div>
+                    <h3>Güçlendirmeler</h3>
+                    <p>Seviye atladıkça güçlen. Daha fazla hasar, daha fazla can, daha hızlı hareket!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Kolay Kontroller</h3>
+                    <p>WASD veya ok tuşları ile hareket et. Otomatik ateş sistemi ile sadece kaç ve öldür!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔥</div>
+                    <h3>Çoklu Seviyeler</h3>
+                    <p>Arena, Cehennem ve Köy seviyelerinde farklı zorluklarla karşılaş!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gameplay Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">40</div>
+                    <div class="stat-label">HP</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">0.4s</div>
+                    <div class="stat-label">Ateş Hızı</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Kill/Level</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">20</div>
+                    <div class="stat-label">Max Level</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Ekran Görüntüleri</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/gameplay-1.jpg" alt="0lon Oyun Ekran Görüntüsü 1" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Arena Savaşı</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gameplay-2.jpg" alt="0lon Oyun Ekran Görüntüsü 2" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Köy Seviyesi</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gameplay-3.jpg" alt="0lon Oyun Ekran Görüntüsü 3" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Cehennem Seviyesi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <h2 class="section-title">Oyunu İndir</h2>
+            <div class="download-content">
+                <div class="download-info">
+                    <h3>Hemen Oynamaya Başla</h3>
+                    <p>Unity 2D ile geliştirilmiş profesyonel roguelike survival deneyimi</p>
+                    <div class="system-requirements">
+                        <h4>Sistem Gereksinimleri</h4>
+                        <ul>
+                            <li>✅ Windows 10 veya üzeri</li>
+                            <li>✅ 2GB RAM</li>
+                            <li>✅ DirectX 11 uyumlu ekran kartı</li>
+                            <li>✅ 500MB boş disk alanı</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="download-buttons">
+                    <a href="#" class="btn btn-download btn-primary">
+                        <span>📥 Windows İndir</span>
+                    </a>
+                    <a href="https://github.com/dnzmnv/0lon" target="_blank" class="btn btn-secondary">
+                        <span>🔗 GitHub'da Görüntüle</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>0lon</h3>
+                    <p>Roguelike survival oyunu</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Bağlantılar</h4>
+                    <ul>
+                        <li><a href="https://github.com/dnzmnv/0lon" target="_blank">GitHub</a></li>
+                        <li><a href="#features">Özellikler</a></li>
+                        <li><a href="#gallery">Galeri</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Geliştirici</h4>
+                    <p>dnzmnv</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 0lon. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
