@@ -75,6 +75,25 @@ http://localhost:8000
 
 ## 🌐 Deployment
 
+### GitHub Pages (Ücretsiz ve Kolay)
+
+1. **Repository Settings'e gidin:**
+   - GitHub'da repository'nize gidin
+   - "Settings" sekmesine tıklayın
+   - Sol menüden "Pages" seçin
+
+2. **Pages ayarlarını yapın:**
+   - Source: "Deploy from a branch" seçin
+   - Branch: `main` seçin
+   - Folder: `/ (root)` seçin
+   - "Save" butonuna tıklayın
+
+3. **Otomatik deployment:**
+   - Her push'ta otomatik deploy edilir
+   - Site şu adreste olacak: `https://okkahai.github.io/0lon-Web`
+
+**Not:** İlk deployment 1-2 dakika sürebilir.
+
 ### Vercel (Önerilen)
 
 1. [Vercel](https://vercel.com) hesabınıza giriş yapın
