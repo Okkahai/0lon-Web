@@ -42,14 +42,6 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const heroImage = document.querySelector('.hero-image');
-    if (heroImage && scrolled < window.innerHeight) {
-        heroImage.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-});
 
 // Intersection Observer for fade-in animations
 const observerOptions = {
@@ -183,3 +175,22 @@ window.addEventListener('load', () => {
 
 // Smooth scroll behavior
 document.documentElement.style.scrollBehavior = 'smooth';
+
+// Play button already has itch.io link in HTML
+
+// Parallax effect for hero section
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const heroImage = document.querySelector('.hero-image');
+    if (heroImage && scrolled < window.innerHeight) {
+        heroImage.style.transform = `translateY(${scrolled * 0.5}px)`;
+    }
+});
+
+// Trailer section animation
+document.querySelectorAll('.trailer-wrapper').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+});
