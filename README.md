@@ -4,8 +4,6 @@ OL0N oyunu için profesyonel, modern web sitesi. GRO-7 Studio tarafından geliş
 
 ![OL0N Poster](images/content.png)
 
-![OL0N Gameplay](images/0456314a-a6fc-44a2-84e9-30d2365bafdc.png)
-
 ## 🎮 Oyun Hakkında
 
 **OL0N**, kıyamet sonrası mega yapıda geçen dalga tabanlı arena aksiyon oyunudur. Düşman dalgalarına karşı hayatta kal, karakterin otomatik olarak muz atışı yapar ve her seviyenin sonunda PORTAL'dan kaç.
@@ -21,81 +19,9 @@ OL0N oyunu için profesyonel, modern web sitesi. GRO-7 Studio tarafından geliş
 - 🏛️ **Çeşitli Arenalar**: Kentsel Harabeler, Fabrika İçleri, Lav Mağaraları, Yeraltı Tünelleri
 - 🎯 **Odak: Hayatta Kalma**: Karmaşık sistemler yok, sadece saf hayatta kalma aksiyonu
 
-## 🚀 Hızlı Başlangıç
+## 🌐 Web Sitesi
 
-### Yerel Geliştirme
-
-1. Repository'yi klonlayın:
-```bash
-git clone https://github.com/Okkahai/0lon-Web.git
-cd 0lon-Web
-```
-
-2. Basit bir HTTP sunucusu ile çalıştırın:
-
-**Python ile:**
-```bash
-python -m http.server 8000
-```
-
-**Node.js ile:**
-```bash
-npx serve .
-```
-
-3. Tarayıcıda açın:
-```
-http://localhost:8000
-```
-
-## 📁 Proje Yapısı
-
-```
-0lon-Web/
-├── index.html          # Ana HTML dosyası
-├── styles.css          # CSS stilleri
-├── script.js           # JavaScript dosyası
-├── images/            # Oyun görselleri
-│   ├── content.png    # Oyun poster görseli
-│   ├── 0456314a-a6fc-44a2-84e9-30d2365bafdc.png
-│   ├── 59264d11-28ba-4646-b429-6acf0d5fb310.png
-│   └── 769a14ef-5de4-4cb5-8caa-0ad1f55766de.png
-├── vercel.json         # Vercel deployment ayarları
-├── package.json        # NPM paket bilgileri
-├── .gitignore          # Git ignore dosyası
-└── README.md           # Bu dosya
-```
-
-## 🎨 Teknolojiler
-
-- **HTML5**: Semantik yapı
-- **CSS3**: Modern stiller, animasyonlar, responsive tasarım
-- **Vanilla JavaScript**: İnteraktif özellikler
-- **Google Fonts**: Orbitron, Rajdhani fontları
-
-## 🌐 Deployment
-
-### GitHub Pages
-
-1. Repository → **Settings** → **Pages**
-2. **Branch:** `main` → **Folder:** `/ (root)` → **Save**
-
-Site: `https://okkahai.github.io/0lon-Web`
-
-### Vercel
-
-1. [Vercel](https://vercel.com) → "New Project"
-2. GitHub repository seçin → "Deploy"
-
-## 🎯 Özellikler
-
-- ✅ Tam responsive tasarım (mobil, tablet, desktop)
-- ✅ Modern, profesyonel görünüm
-- ✅ Smooth animasyonlar
-- ✅ Lightbox galeri
-- ✅ SEO uyumlu
-- ✅ Hızlı yükleme
-- ✅ Cross-browser uyumluluk
+**Canlı Site:** [https://okkahai.github.io/0lon-Web](https://okkahai.github.io/0lon-Web)
 
 ## 👥 Geliştirici Ekip
 
@@ -109,19 +35,10 @@ Site: `https://okkahai.github.io/0lon-Web`
 - Burak Arda Özköse
 - Oğuz Köylü
 
-## 📝 Lisans
-
-Bu proje GRO-7 Studio'ya aittir. Tüm hakları saklıdır.
-
 ## 🔗 Bağlantılar
 
 - **Oyun Repository**: [GitHub](https://github.com/dnzmnv/0lon)
-- **itch.io**: [Yakında](https://itch.io)
-- **Web Oyun**: Unity WebGL ile tarayıcıda oynanabilir
-
-## 📧 İletişim
-
-Sorularınız için GitHub Issues kullanabilirsiniz.
+- **Web Sitesi**: [https://okkahai.github.io/0lon-Web](https://okkahai.github.io/0lon-Web)
 
 ---
 
