@@ -2,20 +2,24 @@
 
 OL0N oyunu için profesyonel, modern web sitesi. GRO-7 Studio tarafından geliştirilen kıyamet sonrası roguelike survival oyununun resmi web sitesi.
 
-![OL0N](images/0456314a-a6fc-44a2-84e9-30d2365bafdc.png)
+![OL0N Poster](images/content.png)
+
+![OL0N Gameplay](images/0456314a-a6fc-44a2-84e9-30d2365bafdc.png)
 
 ## 🎮 Oyun Hakkında
 
-**OL0N**, kıyamet sonrası dev bir mega yapının içinde geçen, dalga tabanlı düşman akınlarına karşı hayatta kalma temalı action-roguelike oyunudur. Vampire Survivors tarzı otomatik saldırı sistemi, ability-silah etkileşimleri ve tier bazlı item yükseltmeleriyle derin bir ilerleme döngüsü sunar.
+**OL0N**, kıyamet sonrası mega yapıda geçen dalga tabanlı arena aksiyon oyunudur. Düşman dalgalarına karşı hayatta kal, karakterin otomatik olarak muz atışı yapar ve her seviyenin sonunda PORTAL'dan kaç.
 
-### Özellikler
+**Hedef Kitle:** 15-35 yaş, roguelike ve bullet heaven hayranları için.
 
-- ⚔️ **Ability-Weapon Kombinasyonları**: Silah ve yeteneklerin birleşiminden doğan hibrit efektler
-- 🏟️ **Arena Modifier Sistemi**: Her arenaya özel çevresel modifier'lar
-- 📈 **Kalıcı Upgrade Sistemi**: Oyun sonu puanlarla kalıcı güçlenme
-- 👹 **Dalga Tabanlı Mücadele**: Her 5 wave'de bir elite düşman ile kademeli zorluk artışı
-- 🎮 **Otomatik Saldırı**: Vampire Survivors tarzı otomatik saldırı sistemi
-- 🔥 **Tier Bazlı Item Sistemi**: Derin ilerleme döngüsü
+### Oyun Mekanikleri
+
+- 🍌 **Otomatik Muz Atışı**: Karakter otomatik olarak muz atışı yapar. Sadece kaç ve konumlan!
+- 🌊 **Dalga Tabanlı Hayatta Kalma**: Her arenada belirli süre hayatta kal, dalga bitince portal açılır
+- 🔫 **Basit Tek Silah Sistemi**: Tek aktif silah - Muz Atışı. Silah değiştirme yok
+- 🌀 **Portal İlerleme Sistemi**: Her seviyenin sonunda portal açılır, yeni alanlara ilerle
+- 🏛️ **Çeşitli Arenalar**: Kentsel Harabeler, Fabrika İçleri, Lav Mağaraları, Yeraltı Tünelleri
+- 🎯 **Odak: Hayatta Kalma**: Karmaşık sistemler yok, sadece saf hayatta kalma aksiyonu
 
 ## 🚀 Hızlı Başlangıç
 
@@ -52,6 +56,7 @@ http://localhost:8000
 ├── styles.css          # CSS stilleri
 ├── script.js           # JavaScript dosyası
 ├── images/            # Oyun görselleri
+│   ├── content.png    # Oyun poster görseli
 │   ├── 0456314a-a6fc-44a2-84e9-30d2365bafdc.png
 │   ├── 59264d11-28ba-4646-b429-6acf0d5fb310.png
 │   └── 769a14ef-5de4-4cb5-8caa-0ad1f55766de.png

@@ -332,6 +332,21 @@ body {
     image-rendering: crisp-edges;
 }
 
+.poster-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border: 3px solid var(--card-border);
+    transition: transform 0.3s;
+}
+
+.poster-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 50px rgba(255, 51, 51, 0.3);
+}
+
 /* Features Section */
 .features {
     padding: 8rem 0;
@@ -384,6 +399,29 @@ body {
     color: var(--text-secondary);
     line-height: 1.8;
     font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.feature-list {
+    list-style: none;
+    margin-top: 1rem;
+    padding-left: 0;
+}
+
+.feature-list li {
+    color: var(--text-secondary);
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.feature-list li::before {
+    content: "•";
+    color: var(--primary-orange);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
 }
 
 /* Gallery Section */
@@ -401,6 +439,16 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
+}
+
+.gallery-item.featured-poster {
+    grid-column: span 2;
+}
+
+@media (max-width: 1024px) {
+    .gallery-item.featured-poster {
+        grid-column: span 1;
+    }
 }
 
 .gallery-item {
