@@ -4,9 +4,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            const offsetTop = target.offsetTop - 80;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
             });
         }
     });
@@ -19,15 +20,9 @@ const navLinks = document.querySelector('.nav-links');
 if (menuToggle) {
     menuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
     });
 }
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-    });
-});
 
 // Navbar background on scroll
 const navbar = document.querySelector('.navbar');
@@ -38,11 +33,22 @@ window.addEventListener('scroll', () => {
     
     if (currentScroll > 100) {
         navbar.style.background = 'rgba(10, 10, 10, 0.98)';
+        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.5)';
     } else {
         navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+        navbar.style.boxShadow = 'none';
     }
     
     lastScroll = currentScroll;
+});
+
+// Parallax effect for hero section
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const heroImage = document.querySelector('.hero-image');
+    if (heroImage && scrolled < window.innerHeight) {
+        heroImage.style.transform = `translateY(${scrolled * 0.5}px)`;
+    }
 });
 
 // Intersection Observer for fade-in animations
@@ -52,18 +58,20 @@ const observerOptions = {
 };
 
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }, index * 100);
         }
     });
 }, observerOptions);
 
-// Observe feature cards and gallery items
-document.querySelectorAll('.feature-card, .gallery-item, .stat-item').forEach(el => {
+// Observe elements for animation
+document.querySelectorAll('.feature-card, .gallery-item, .news-card').forEach(el => {
     el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
+    el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
@@ -82,19 +90,20 @@ document.querySelectorAll('img').forEach(img => {
             justify-content: center;
             color: #666;
             font-size: 1rem;
+            min-height: 300px;
         `;
         placeholder.textContent = 'Görsel yüklenemedi';
         this.parentNode.appendChild(placeholder);
     });
 });
 
-// Gallery lightbox effect (optional enhancement)
+// Gallery lightbox effect
 document.querySelectorAll('.gallery-item').forEach(item => {
     item.addEventListener('click', function() {
         const img = this.querySelector('img');
         if (img && img.src) {
-            // Simple lightbox - can be enhanced with a library
             const lightbox = document.createElement('div');
+            lightbox.className = 'lightbox';
             lightbox.style.cssText = `
                 position: fixed;
                 top: 0;
@@ -107,6 +116,7 @@ document.querySelectorAll('.gallery-item').forEach(item => {
                 justify-content: center;
                 z-index: 10000;
                 cursor: pointer;
+                animation: fadeIn 0.3s ease;
             `;
             
             const lightboxImg = document.createElement('img');
@@ -118,63 +128,58 @@ document.querySelectorAll('.gallery-item').forEach(item => {
                 image-rendering: pixelated;
                 image-rendering: -moz-crisp-edges;
                 image-rendering: crisp-edges;
+                border: 3px solid #ff3333;
+                box-shadow: 0 0 50px rgba(255, 51, 51, 0.5);
             `;
             
             lightbox.appendChild(lightboxImg);
             document.body.appendChild(lightbox);
+            document.body.style.overflow = 'hidden';
             
             lightbox.addEventListener('click', () => {
-                document.body.removeChild(lightbox);
+                lightbox.style.animation = 'fadeOut 0.3s ease';
+                setTimeout(() => {
+                    document.body.removeChild(lightbox);
+                    document.body.style.overflow = '';
+                }, 300);
             });
+            
+            const closeOnEsc = (e) => {
+                if (e.key === 'Escape') {
+                    lightbox.click();
+                    document.removeEventListener('keydown', closeOnEsc);
+                }
+            };
+            document.addEventListener('keydown', closeOnEsc);
         }
     });
 });
 
-// Add parallax effect to hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero-background');
-    if (hero) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+// Add CSS animations for lightbox
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+    }
+`;
+document.head.appendChild(style);
+
+// Hero text animation on load
+window.addEventListener('load', () => {
+    const heroText = document.querySelector('.hero-text');
+    if (heroText) {
+        heroText.style.opacity = '0';
+        heroText.style.transition = 'opacity 1s ease';
+        setTimeout(() => {
+            heroText.style.opacity = '1';
+        }, 100);
     }
 });
 
-// Stats counter animation
-const animateCounter = (element, target, duration = 2000) => {
-    const start = 0;
-    const increment = target / (duration / 16);
-    let current = start;
-    
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            element.textContent = target;
-            clearInterval(timer);
-        } else {
-            element.textContent = Math.floor(current);
-        }
-    }, 16);
-};
-
-// Observe stats section for counter animation
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.querySelectorAll('.stat-number').forEach(stat => {
-                const text = stat.textContent;
-                // Check if it's a number
-                const number = parseInt(text);
-                if (!isNaN(number)) {
-                    stat.textContent = '0';
-                    animateCounter(stat, number);
-                }
-            });
-            statsObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-const statsSection = document.querySelector('.stats');
-if (statsSection) {
-    statsObserver.observe(statsSection);
-}
+// Smooth scroll behavior
+document.documentElement.style.scrollBehavior = 'smooth';

@@ -1,113 +1,134 @@
-# 0lon Web Sitesi
+# OL0N - Web Sitesi
 
-0lon oyunu için modern, profesyonel landing page.
+OL0N oyunu için profesyonel, modern web sitesi. GRO-7 Studio tarafından geliştirilen kıyamet sonrası roguelike survival oyununun resmi web sitesi.
 
-## Özellikler
+![OL0N](images/0456314a-a6fc-44a2-84e9-30d2365bafdc.png)
 
-- 🎮 Oyun estetiğine uygun pixel art temalı tasarım
-- 📱 Tam responsive (mobil, tablet, desktop)
-- ⚡ Hızlı yükleme ve smooth animasyonlar
-- 🎨 Modern UI/UX tasarımı
-- 🔥 Vampire Survivors tarzı roguelike survival teması
+## 🎮 Oyun Hakkında
 
-## Yerel Geliştirme
+**OL0N**, kıyamet sonrası dev bir mega yapının içinde geçen, dalga tabanlı düşman akınlarına karşı hayatta kalma temalı action-roguelike oyunudur. Vampire Survivors tarzı otomatik saldırı sistemi, ability-silah etkileşimleri ve tier bazlı item yükseltmeleriyle derin bir ilerleme döngüsü sunar.
 
+### Özellikler
+
+- ⚔️ **Ability-Weapon Kombinasyonları**: Silah ve yeteneklerin birleşiminden doğan hibrit efektler
+- 🏟️ **Arena Modifier Sistemi**: Her arenaya özel çevresel modifier'lar
+- 📈 **Kalıcı Upgrade Sistemi**: Oyun sonu puanlarla kalıcı güçlenme
+- 👹 **Dalga Tabanlı Mücadele**: Her 5 wave'de bir elite düşman ile kademeli zorluk artışı
+- 🎮 **Otomatik Saldırı**: Vampire Survivors tarzı otomatik saldırı sistemi
+- 🔥 **Tier Bazlı Item Sistemi**: Derin ilerleme döngüsü
+
+## 🚀 Hızlı Başlangıç
+
+### Yerel Geliştirme
+
+1. Repository'yi klonlayın:
 ```bash
-# Basit bir HTTP sunucusu ile çalıştır
-npx serve .
+git clone https://github.com/Okkahai/0lon-Web.git
+cd 0lon-Web
+```
 
-# veya Python ile
+2. Basit bir HTTP sunucusu ile çalıştırın:
+
+**Python ile:**
+```bash
 python -m http.server 8000
 ```
 
-Tarayıcıda `http://localhost:8000` adresini açın.
-
-## Vercel'e Deploy
-
-### Yöntem 1: Vercel CLI
-
+**Node.js ile:**
 ```bash
-# Vercel CLI'yi yükle (eğer yoksa)
-npm i -g vercel
-
-# Projeyi deploy et
-vercel
-
-# Production'a deploy et
-vercel --prod
+npx serve .
 ```
 
-### Yöntem 2: GitHub ile
+3. Tarayıcıda açın:
+```
+http://localhost:8000
+```
 
-1. Bu projeyi bir GitHub repository'sine push edin
-2. [Vercel](https://vercel.com) hesabınıza giriş yapın
-3. "New Project" butonuna tıklayın
-4. GitHub repository'nizi seçin
-5. Vercel otomatik olarak ayarları algılayacak
-6. "Deploy" butonuna tıklayın
-
-### Yöntem 3: Vercel Dashboard
-
-1. [Vercel Dashboard](https://vercel.com/dashboard)'a gidin
-2. "Add New..." → "Project" seçin
-3. GitHub repository'nizi import edin veya manuel olarak dosyaları yükleyin
-4. Deploy edin
-
-## Dosya Yapısı
+## 📁 Proje Yapısı
 
 ```
 0lon-Web/
 ├── index.html          # Ana HTML dosyası
 ├── styles.css          # CSS stilleri
 ├── script.js           # JavaScript dosyası
-├── vercel.json         # Vercel konfigürasyonu
+├── images/            # Oyun görselleri
+│   ├── 0456314a-a6fc-44a2-84e9-30d2365bafdc.png
+│   ├── 59264d11-28ba-4646-b429-6acf0d5fb310.png
+│   └── 769a14ef-5de4-4cb5-8caa-0ad1f55766de.png
+├── vercel.json         # Vercel deployment ayarları
 ├── package.json        # NPM paket bilgileri
-├── README.md          # Bu dosya
-└── images/            # Oyun ekran görüntüleri
-    ├── gameplay-1.jpg
-    ├── gameplay-2.jpg
-    └── gameplay-3.jpg
+├── .gitignore          # Git ignore dosyası
+└── README.md           # Bu dosya
 ```
 
-## Görseller
+## 🎨 Teknolojiler
 
-Görselleri `images/` klasörüne ekleyin:
-- `gameplay-1.jpg` - Ana hero görseli
-- `gameplay-2.jpg` - Galeri görseli 1
-- `gameplay-3.jpg` - Galeri görseli 2
+- **HTML5**: Semantik yapı
+- **CSS3**: Modern stiller, animasyonlar, responsive tasarım
+- **Vanilla JavaScript**: İnteraktif özellikler
+- **Google Fonts**: Orbitron, Rajdhani fontları
 
-Görseller yoksa, site otomatik olarak placeholder gösterir.
+## 🌐 Deployment
 
-## Özelleştirme
+### Vercel (Önerilen)
 
-### Renkler
+1. [Vercel](https://vercel.com) hesabınıza giriş yapın
+2. "New Project" butonuna tıklayın
+3. GitHub repository'nizi import edin
+4. Vercel otomatik olarak ayarları algılayacak
+5. "Deploy" butonuna tıklayın
 
-`styles.css` dosyasındaki CSS değişkenlerini düzenleyin:
+### GitHub Pages
 
-```css
-:root {
-    --primary-color: #ff4444;
-    --secondary-color: #ff8800;
-    --dark-bg: #0a0a0a;
-    /* ... */
-}
-```
+1. Repository Settings'e gidin
+2. Pages bölümüne gidin
+3. Source olarak "main" branch'ini seçin
+4. Save'e tıklayın
 
-### İçerik
+### Manuel Deployment
 
-`index.html` dosyasındaki metinleri düzenleyin.
+Dosyaları herhangi bir statik hosting servisine yükleyebilirsiniz:
+- Netlify
+- GitHub Pages
+- Firebase Hosting
+- AWS S3 + CloudFront
 
-## Teknolojiler
+## 🎯 Özellikler
 
-- HTML5
-- CSS3 (CSS Variables, Grid, Flexbox)
-- Vanilla JavaScript
-- Google Fonts (Press Start 2P, Orbitron)
+- ✅ Tam responsive tasarım (mobil, tablet, desktop)
+- ✅ Modern, profesyonel görünüm
+- ✅ Smooth animasyonlar
+- ✅ Lightbox galeri
+- ✅ SEO uyumlu
+- ✅ Hızlı yükleme
+- ✅ Cross-browser uyumluluk
 
-## Lisans
+## 👥 Geliştirici Ekip
 
-MIT License
+**GRO-7 Studio**
 
-## Geliştirici
+- Gun Deniz
+- Deniz Yalım Yılmaz
+- Deniz Manav
+- Emre Akar
+- Yiğit Kay
+- Burak Arda Özköse
+- Oğuz Köylü
 
-dnzmnv - [GitHub](https://github.com/dnzmnv)
+## 📝 Lisans
+
+Bu proje GRO-7 Studio'ya aittir. Tüm hakları saklıdır.
+
+## 🔗 Bağlantılar
+
+- **Oyun Repository**: [GitHub](https://github.com/dnzmnv/0lon)
+- **itch.io**: [Yakında](https://itch.io)
+- **Web Oyun**: Unity WebGL ile tarayıcıda oynanabilir
+
+## 📧 İletişim
+
+Sorularınız için GitHub Issues kullanabilirsiniz.
+
+---
+
+**OL0N** - Kıyamet sonrası hayatta kalma mücadelesi. GRO-7 Studio © 2025

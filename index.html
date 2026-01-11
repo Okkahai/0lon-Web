@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="0lon - Vampire Survivors tarzı hızlı tempolu roguelike survival oyunu. Düşman dalgalarına karşı hayatta kal!">
-    <title>0lon - Roguelike Survival Oyunu</title>
+    <meta name="description" content="OL0N - GRO-7 tarafından geliştirilen kıyamet sonrası roguelike survival oyunu. Steam'de yakında.">
+    <title>OL0N - GRO-7 Studio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
+        <div class="nav-container">
             <div class="logo">
-                <span class="logo-text">0lon</span>
+                <span class="logo-text">OL0N</span>
             </div>
             <ul class="nav-links">
-                <li><a href="#home">Ana Sayfa</a></li>
+                <li><a href="#about">Hakkında</a></li>
                 <li><a href="#features">Özellikler</a></li>
                 <li><a href="#gallery">Galeri</a></li>
-                <li><a href="#download">İndir</a></li>
+                <li><a href="#news">Haberler</a></li>
             </ul>
+            <div class="nav-actions">
+                <a href="#play" class="btn-play">OYNA</a>
+            </div>
             <button class="menu-toggle" aria-label="Menu">
                 <span></span>
                 <span></span>
@@ -31,98 +34,89 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+    <!-- Hero Section - Full Screen -->
+    <section class="hero">
         <div class="hero-background">
-            <div class="pixel-grid"></div>
+            <img src="images/0456314a-a6fc-44a2-84e9-30d2365bafdc.png" alt="OL0N Game" class="hero-image">
+            <div class="hero-overlay"></div>
         </div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="title-main">0lon</span>
-                    <span class="title-subtitle">Hayatta Kal</span>
-                </h1>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">OL0N</h1>
+                <p class="hero-subtitle">KIYAMET SONRASI HAYATTA KALMA</p>
                 <p class="hero-description">
-                    Vampire Survivors tarzı hızlı tempolu roguelike survival oyunu. 
-                    Sürekli artan düşman dalgalarına karşı mücadele et, seviye atla ve 
-                    mümkün olduğunca uzun süre hayatta kalmaya çalış!
+                    Kıyamet sonrası dev bir mega yapının içinde geçen, dalga tabanlı düşman akınlarına karşı hayatta kalma temalı action-roguelike.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#download" class="btn btn-primary">Oyunu İndir</a>
-                    <a href="#features" class="btn btn-secondary">Özellikler</a>
+                    <a href="#play" class="btn-primary">ŞİMDİ OYNA</a>
+                    <a href="#about" class="btn-secondary">Daha Fazla Bilgi</a>
                 </div>
-            </div>
-            <div class="hero-image">
-                <div class="game-preview">
-                    <div class="pixel-frame">
-                        <img src="images/gameplay-1.jpg" alt="0lon Oyun Ekran Görüntüsü" id="hero-image">
-                    </div>
+                <div class="hero-info">
+                    <span class="info-item">GRO-7 Studio</span>
+                    <span class="info-divider">•</span>
+                    <span class="info-item">Unity Web</span>
+                    <span class="info-divider">•</span>
+                    <span class="info-item">itch.io</span>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <span></span>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">HAYATTA KAL</h2>
+                    <p class="about-description">
+                        Dünya yüzeyinde yaşam sona ermiş, insanlığın kalıntıları devasa bir yapının katmanlarında hayatta kalmaya çalışmaktadır. 
+                        Sistem tarafından yeniden uyandırılmış bir savaşçı olarak bu labirent yapıda, çeşitli düşman dalgalarına karşı hayatta kalmaya çalış.
+                    </p>
+                    <p class="about-description">
+                        Vampire Survivors tarzı otomatik saldırı sistemi, ability-silah etkileşimleri ve tier bazlı item yükseltmeleriyle derin bir ilerleme döngüsü.
+                    </p>
+                </div>
+                <div class="about-visual">
+                    <img src="images/59264d11-28ba-4646-b429-6acf0d5fb310.png" alt="OL0N Gameplay">
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Features Section -->
     <section id="features" class="features">
         <div class="container">
-            <h2 class="section-title">Oyun Özellikleri</h2>
+            <h2 class="section-title">ÖZELLİKLER</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">⚔️</div>
-                    <h3>Hızlı Tempolu Savaş</h3>
-                    <p>Otomatik ateş sistemi ile sürekli aksiyon. Her 0.4 saniyede bir düşmanlara saldır!</p>
+                    <h3>Ability-Weapon Kombinasyonları</h3>
+                    <p>Silah ve yeteneklerin birleşiminden doğan hibrit efektler ve güçlü sinerjiler</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏟️</div>
+                    <h3>Arena Modifier Sistemi</h3>
+                    <p>Her arenaya özel çevresel modifier'lar ile her oyun farklı bir deneyim</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📈</div>
-                    <h3>Hızlı İlerleme</h3>
-                    <p>Her 5 öldürmede seviye atla. 20 seviyeye kadar çık ve güçlen!</p>
+                    <h3>Kalıcı Upgrade Sistemi</h3>
+                    <p>Oyun sonu puanlarla kalıcı upgrade'leri aç ve yeni içeriklerin kilidini aç</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">👹</div>
-                    <h3>Dalga Sistemi</h3>
-                    <p>Her 6 saniyede bir büyük düşman dalgaları. Zamanla zorluk artar!</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💪</div>
-                    <h3>Güçlendirmeler</h3>
-                    <p>Seviye atladıkça güçlen. Daha fazla hasar, daha fazla can, daha hızlı hareket!</p>
+                    <h3>Dalga Tabanlı Mücadele</h3>
+                    <p>Her 5 wave'de bir elite düşman ile kademeli zorluk artışı</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🎮</div>
-                    <h3>Kolay Kontroller</h3>
-                    <p>WASD veya ok tuşları ile hareket et. Otomatik ateş sistemi ile sadece kaç ve öldür!</p>
+                    <h3>Otomatik Saldırı</h3>
+                    <p>Vampire Survivors tarzı otomatik saldırı sistemi ile sadece hareket et ve stratejik kararlar ver</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🔥</div>
-                    <h3>Çoklu Seviyeler</h3>
-                    <p>Arena, Cehennem ve Köy seviyelerinde farklı zorluklarla karşılaş!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gameplay Stats -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">40</div>
-                    <div class="stat-label">HP</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">0.4s</div>
-                    <div class="stat-label">Ateş Hızı</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">5</div>
-                    <div class="stat-label">Kill/Level</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">20</div>
-                    <div class="stat-label">Max Level</div>
+                    <h3>Tier Bazlı Item Sistemi</h3>
+                    <p>Exp toplayarak yetenek, silah veya item seç. Tier bazlı yükseltmelerle güçlen</p>
                 </div>
             </div>
         </div>
@@ -131,55 +125,53 @@
     <!-- Gallery Section -->
     <section id="gallery" class="gallery">
         <div class="container">
-            <h2 class="section-title">Ekran Görüntüleri</h2>
+            <h2 class="section-title">EKran Görüntüleri</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="images/gameplay-1.jpg" alt="0lon Oyun Ekran Görüntüsü 1" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Arena Savaşı</span>
-                    </div>
+                    <img src="images/0456314a-a6fc-44a2-84e9-30d2365bafdc.png" alt="OL0N Screenshot 1">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/gameplay-2.jpg" alt="0lon Oyun Ekran Görüntüsü 2" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Köy Seviyesi</span>
-                    </div>
+                    <img src="images/59264d11-28ba-4646-b429-6acf0d5fb310.png" alt="OL0N Screenshot 2">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/gameplay-3.jpg" alt="0lon Oyun Ekran Görüntüsü 3" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Cehennem Seviyesi</span>
-                    </div>
+                    <img src="images/769a14ef-5de4-4cb5-8caa-0ad1f55766de.png" alt="OL0N Screenshot 3">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Download Section -->
-    <section id="download" class="download">
+    <!-- Play Section -->
+    <section id="play" class="play">
         <div class="container">
-            <h2 class="section-title">Oyunu İndir</h2>
-            <div class="download-content">
-                <div class="download-info">
-                    <h3>Hemen Oynamaya Başla</h3>
-                    <p>Unity 2D ile geliştirilmiş profesyonel roguelike survival deneyimi</p>
-                    <div class="system-requirements">
-                        <h4>Sistem Gereksinimleri</h4>
-                        <ul>
-                            <li>✅ Windows 10 veya üzeri</li>
-                            <li>✅ 2GB RAM</li>
-                            <li>✅ DirectX 11 uyumlu ekran kartı</li>
-                            <li>✅ 500MB boş disk alanı</li>
-                        </ul>
-                    </div>
+            <h2 class="section-title">OYNA</h2>
+            <div class="play-content">
+                <div class="play-description">
+                    <p>OL0N'u tarayıcınızda oynayın! Unity WebGL ile geliştirilmiş, herhangi bir indirme gerektirmeden direkt oynayabilirsiniz.</p>
                 </div>
-                <div class="download-buttons">
-                    <a href="#" class="btn btn-download btn-primary">
-                        <span>📥 Windows İndir</span>
-                    </a>
-                    <a href="https://github.com/dnzmnv/0lon" target="_blank" class="btn btn-secondary">
-                        <span>🔗 GitHub'da Görüntüle</span>
-                    </a>
+                <div class="play-buttons">
+                    <a href="#" class="btn-play-large">TARAYICIDA OYNA</a>
+                    <a href="https://itch.io" target="_blank" class="btn-itchio">itch.io'da Oyna</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="news">
+        <div class="container">
+            <h2 class="section-title">HABERLER</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-date">Geliştirme</div>
+                    <h3>GRO-7 Studio</h3>
+                    <p>Gun Deniz, Deniz Yalım Yılmaz, Deniz Manav, Emre Akar, Yiğit Kay, Burak Arda Özköse, Oğuz Köylü</p>
+                    <a href="#" class="news-link">Daha Fazla →</a>
+                </div>
+                <div class="news-card">
+                    <div class="news-date">Platform</div>
+                    <h3>Unity WebGL</h3>
+                    <p>Oyun Unity WebGL ile geliştirildi. Tarayıcınızda direkt oynayabilir, indirme yapmanıza gerek yok.</p>
+                    <a href="#play" class="news-link">Oyna →</a>
                 </div>
             </div>
         </div>
@@ -189,25 +181,23 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>0lon</h3>
-                    <p>Roguelike survival oyunu</p>
+                <div class="footer-brand">
+                    <h3>OL0N</h3>
+                    <p>GRO-7 Studio</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Bağlantılar</h4>
-                    <ul>
-                        <li><a href="https://github.com/dnzmnv/0lon" target="_blank">GitHub</a></li>
-                        <li><a href="#features">Özellikler</a></li>
-                        <li><a href="#gallery">Galeri</a></li>
-                    </ul>
+                <div class="footer-links">
+                    <a href="#about">Hakkında</a>
+                    <a href="#features">Özellikler</a>
+                    <a href="#gallery">Galeri</a>
+                    <a href="#news">Haberler</a>
                 </div>
-                <div class="footer-section">
-                    <h4>Geliştirici</h4>
-                    <p>dnzmnv</p>
+                <div class="footer-social">
+                    <a href="https://github.com/dnzmnv/0lon" target="_blank" class="social-link">GitHub</a>
+                    <a href="https://itch.io" target="_blank" class="social-link">itch.io</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 0lon. Tüm hakları saklıdır.</p>
+                <p>&copy; 2025 OL0N - GRO-7 Studio. Tüm hakları saklıdır.</p>
             </div>
         </div>
     </footer>
