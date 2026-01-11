@@ -77,22 +77,25 @@ http://localhost:8000
 
 ### GitHub Pages (Ücretsiz ve Kolay)
 
+Statik site olduğu için GitHub Pages çok kolay:
+
 1. **Repository Settings'e gidin:**
-   - GitHub'da repository'nize gidin
+   - GitHub'da `Okkahai/0lon-Web` repository'sine gidin
    - "Settings" sekmesine tıklayın
    - Sol menüden "Pages" seçin
 
 2. **Pages ayarlarını yapın:**
-   - Source: "Deploy from a branch" seçin
-   - Branch: `main` seçin
-   - Folder: `/ (root)` seçin
-   - "Save" butonuna tıklayın
+   - **Source:** "Deploy from a branch" seçin
+   - **Branch:** `main` seçin
+   - **Folder:** `/ (root)` seçin
+   - **Save** butonuna tıklayın
 
-3. **Otomatik deployment:**
-   - Her push'ta otomatik deploy edilir
-   - Site şu adreste olacak: `https://okkahai.github.io/0lon-Web`
+3. **Hazır!**
+   - 1-2 dakika içinde site canlı olacak
+   - Site adresi: `https://okkahai.github.io/0lon-Web`
+   - Her push'ta otomatik güncellenir
 
-**Not:** İlk deployment 1-2 dakika sürebilir.
+**Not:** İlk deployment 1-2 dakika sürebilir. Sonrasında her push'ta otomatik güncellenir.
 
 ### Vercel (Önerilen)
 
